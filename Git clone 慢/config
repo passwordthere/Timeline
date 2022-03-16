@@ -1,0 +1,16 @@
+ProxyCommand "C:\Program Files\Git\mingw64\bin\connect" -S 127.0.0.1:10808 -a none %h %p
+
+Host github.com
+  User git
+  Port 22
+  Hostname github.com
+  IdentityFile "C:\Users\lin\.ssh\id_rsa"
+  TCPKeepAlive yes
+
+Host ssh.github.com
+  User git
+  Port 443
+  Hostname ssh.github.com
+  # 注意修改路径为你的路径
+  IdentityFile "C:\Users\lin\.ssh\id_rsa"
+  TCPKeepAlive yes
